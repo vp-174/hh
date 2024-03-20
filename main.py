@@ -1,4 +1,4 @@
-# build/0001
+# build/0002
 
 import time, random, json, requests, xlsxwriter, subprocess
 import pandas as pd
@@ -26,7 +26,7 @@ def search(base_url):
     page = 0
     count = 1
     while True:
-        if page > 20:
+        if count >= 1999:
             break
         match search_mode:
             case 0:
