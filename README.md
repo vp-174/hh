@@ -1,1 +1,0 @@
-## Head Hunter vacancies parser
