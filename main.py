@@ -233,6 +233,8 @@ class HHParse(QMainWindow):
         self.ui.statusbar.showMessage(f"{msg}")
 
 app = QApplication()
+app_icon = QIcon('icon.ico')
+app.setWindowIcon(app_icon)
 window = HHParse()
 window.show()
 sys.exit(app.exec())
