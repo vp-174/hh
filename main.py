@@ -1,7 +1,11 @@
 # build/0003
 import sys
-from PySide6 import QtWidgets
-from PySide6.QtWidgets import QApplication, QMainWindow
+
+from PySide6 import *
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
+from PySide6.QtCore import *
+
 from gui import Ui_MainWindow
 import time, random, json, requests, xlsxwriter, subprocess
 import pandas as pd
