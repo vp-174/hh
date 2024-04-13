@@ -1,18 +1,18 @@
 # build/0003
 import sys
+from gui import Ui_MainWindow
 
 from PySide6 import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 from PySide6.QtCore import *
+from PySide6.QtCore import QThread, Signal
 
-from gui import Ui_MainWindow
 import time, random, json, requests, xlsxwriter, subprocess
 import pandas as pd
 from openpyxl import Workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
 from datetime import datetime
-from PySide6.QtCore import QThread, Signal
 
 class SearchThread(QThread):
     update_count = Signal(int)
@@ -236,9 +236,7 @@ class HHParse(QMainWindow):
     def update_statusbar2(self, msg):
         self.ui.statusbar.showMessage(f"{msg}")
 
-app = QApplication()
-app_icon = QIcon('icon.ico')
-app.setWindowIcon(app_icon)
+app = QApplication(sys.argv)
 window = HHParse()
 window.show()
 sys.exit(app.exec())

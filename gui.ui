@@ -34,6 +34,10 @@
   <property name="windowTitle">
    <string>hh parse | build/0003</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="rc.qrc">
+    <normaloff>:/icon/icon.ico</normaloff>:/icon/icon.ico</iconset>
+  </property>
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
@@ -144,6 +148,8 @@ border-radius: 4px;</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="rc.qrc"/>
+ </resources>
  <connections/>
 </ui>

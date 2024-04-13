@@ -17,6 +17,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QLineEdit, QMainWindow,
     QSizePolicy, QStatusBar, QWidget)
+import rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -31,6 +32,9 @@ class Ui_MainWindow(object):
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMinimumSize(QSize(542, 104))
         MainWindow.setMaximumSize(QSize(542, 104))
+        icon = QIcon()
+        icon.addFile(u":/icon/icon.ico", QSize(), QIcon.Normal, QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         MainWindow.setAutoFillBackground(False)
         MainWindow.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0.506, y1:1, x2:0.522, y2:0, stop:0 rgba(140, 140, 140, 255), stop:1 rgba(150, 150, 150, 255));")
         self.centralwidget = QWidget(MainWindow)
