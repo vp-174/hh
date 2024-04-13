@@ -6,7 +6,6 @@ from PySide6 import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 from PySide6.QtCore import *
-from PySide6.QtCore import QThread, Signal
 
 import time, random, json, requests, xlsxwriter, subprocess
 import pandas as pd
