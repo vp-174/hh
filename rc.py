@@ -1,3 +1,4 @@
+#
 from PySide6 import QtCore
 
 qt_resource_data = b"\
