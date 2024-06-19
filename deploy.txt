@@ -1,0 +1,1 @@
+pyinstaller --noconfirm --onefile --windowed --icon "D:/_apps/parse/hh/icon.ico" --name "hh_parse_build0004_Win" --add-data "d:/_apps/parse/hh/icon.ico;." --paths "D:/_apps/parse/hh" "D:/_apps/parse/hh/main.py"

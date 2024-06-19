@@ -1,4 +1,12 @@
-## -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'gui.ui'
+##
+## Created by: Qt User Interface Compiler version 6.7.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
 
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
@@ -65,7 +73,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"hh parse | build/0003", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"hh parse | build/0004", None))
 #if QT_CONFIG(tooltip)
         self.lineSearch.setToolTip("")
 #endif // QT_CONFIG(tooltip)

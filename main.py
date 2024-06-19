@@ -1,4 +1,7 @@
-# build/0003
+# build/0004
+## for update
+# pyside6-uic gui.ui -o gui.py
+# pyside6-rcc rc.qrc -o rc.py
 import sys
 from gui import Ui_MainWindow
 
@@ -160,9 +163,9 @@ class SearchThread(QThread):
                     temp_list = []  # временный список для каждой страницы
                     for d1 in d['items']:
                         print(
-                            f"[{count}] [{d1['area']['name']}] [{d1['schedule']['name']}] [{d1['experience']['name']}] :: {d1['name']} : {d1['salary']['from']} {d1['salary']['currency']} : {d1['alternate_url']}")
+                            f"[{count}] [{d1['area']['name']}] [{d1['employer']['name']}] [{d1['schedule']['name']}] [{d1['experience']['name']}] :: {d1['name']} : {d1['salary']['from']} {d1['salary']['currency']} : {d1['alternate_url']}")
                         temp_list.append(
-                            [d1['area']['name'], d1['schedule']['name'], d1['experience']['name'], d1['name'],
+                            [d1['area']['name'], d1['employer']['name'], d1['schedule']['name'], d1['experience']['name'], d1['name'],
                              d1['salary']['from'], d1['salary']['currency'],
                              d1['alternate_url']])  # Добавляем данные во временный список
 
@@ -170,7 +173,7 @@ class SearchThread(QThread):
                         count += 1
                     if temp_list:  # Проверка наличия данных
                         temp_df = pd.DataFrame(temp_list,
-                                               columns=["Город", "Тип работы", "Опыт", "Название", "Зарплата", "Валюта",
+                                               columns=["Город", "Компания", "Тип работы", "Опыт", "Название", "Зарплата", "Валюта",
                                                         "Ссылка"])  # Создаем DataFrame из временного списка
                         data_list.append(temp_df)  # Добавляем временный DataFrame в список
                     else:
@@ -202,12 +205,13 @@ class SearchThread(QThread):
 
         # Устанавливаем ширину столбцов
         worksheet.set_column('A:A', 20)
-        worksheet.set_column('B:B', 20)
+        worksheet.set_column('B:B', 55)
         worksheet.set_column('C:C', 20)
-        worksheet.set_column('D:D', 80)
-        worksheet.set_column('E:E', 10)
-        worksheet.set_column('F:F', 8)
-        worksheet.set_column('G:G', 30)
+        worksheet.set_column('D:D', 20)
+        worksheet.set_column('E:E', 80)
+        worksheet.set_column('F:F', 10)
+        worksheet.set_column('G:G', 8)
+        worksheet.set_column('H:H', 30)
         writer.close()
 
         self.update_msg.emit(f"Открытие файла {filename}")
